@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	int a[4] = { 1, 2, 3, 4 };
+	int size = sizeof(a) / sizeof(a[0]);
+
+	for (int* cp = a; cp < a + size; cp++) {
+		cout << (void*)cp << " : " << (*cp) << endl;
+	}
+
+
+	// su chech lech giua 2 con tro la 4
+	return 0;
+}
