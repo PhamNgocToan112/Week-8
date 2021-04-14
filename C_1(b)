@@ -1,0 +1,14 @@
+void delete_char(char a[], char c) {
+	char* i; 
+	i = a;
+	while (*i != '\0') {
+		if (*i == c) {
+			char* j  ;
+			for (j = i; *j != '\0'; j++) {
+				*j = *(j + 1);
+			}
+			*j = '\0';
+		}
+		++i;
+	}
+}
