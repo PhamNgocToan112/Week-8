@@ -1,16 +1,36 @@
+
 #include <iostream>
 
 using namespace std;
 int main()
 {
-	int a[4] = { 1, 2, 3, 4 };
+	int a[] = { 1, 2, 3, 4 };
 	int size = sizeof(a) / sizeof(a[0]);
 
 	for (int* cp = a; cp < a + size; cp++) {
 		cout << (void*)cp << " : " << (*cp) << endl;
 	}
+	cout << endl;
+	// sự chênh lệch giữa 2 con trỏ là 4
 
+	double a2[] = { 1, 2, 3, 4, 5, 6 };
+	int size2 = sizeof(a2) / sizeof(a2[0]);
 
-	// su chech lech giua 2 con tro la 4
+	for (double* cp2 = a2; cp2 < a2 + size2; cp2++) {
+		cout << (void*)cp2 << " : " << (*cp2) << endl;
+	}
+	cout << endl;
+	// sự chênh lệch giữa 2 con trỏ là 8
+
+	double a3[] = { 1, 2, 3, 4, 5, 6 };
+	int size3 = sizeof(a3) / sizeof(a3[0]);
+
+	for (double* cp3 = a3; cp3 < a3 + size3; cp3 += 2) {
+		cout << (void*)cp3 << " : " << (*cp3) << endl;
+	}
+
+	// kết quả vẫn tương tự như trên nhưng thiếu một số phần tử
+
 	return 0;
 }
+
