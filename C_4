@@ -1,0 +1,11 @@
+
+void reverse(char a[]) {
+	int size = 0;
+	while (a[size] != '\0') {
+		size++;
+	}
+
+	for (char* i = a + size - 1; i >= a; i--) {
+		cout << *i;
+	}
+}
