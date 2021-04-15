@@ -1,1 +1,24 @@
 
+#include <iostream>
+
+using namespace std;
+
+void delete_char(char a[], int n) {
+	int size = 0;
+	char* i = a;
+	while (*(i + size) != '\0') {
+		size++;
+	}
+
+	while(size < n){
+		for(char* j = a + size; j > a; j--){
+			*j = *(j - 1);
+		}
+		*(a) = ' ';
+		
+		size++;
+	}
+	
+	*(a + size) = '\0';
+
+}
