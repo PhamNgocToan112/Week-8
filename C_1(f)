@@ -1,0 +1,15 @@
+bool is_palindrome(char a[]){
+	int size = 0;
+	char* i = a;
+	while(*(i + size) != '\0'){
+		++size;
+	}
+	
+	for(; i < a + size; i++){
+		if(*i != *(a + size - 1)){
+			return false;
+		}
+		size--;
+	}
+	return true;
+}
