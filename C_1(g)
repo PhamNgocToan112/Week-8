@@ -1,0 +1,11 @@
+void trim_left(char a[]){
+	char* i;
+	while(*a == ' '){
+		for(i = a ; *i != '\0'; i++){
+			*i = *(i + 1);
+		}
+	}
+	
+	*(i + 1) = '\0';
+
+}
