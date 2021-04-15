@@ -1,0 +1,12 @@
+void delete_char(char a[], int n) {
+	int size = 0;
+	char* i = a;
+	while (*(i + size) != '\0') {
+		size++;
+	}
+
+	while(size > n){
+		*(a + size - 1) = '\0';
+		size--;
+	}
+}
